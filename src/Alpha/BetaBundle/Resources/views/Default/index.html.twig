@@ -5,34 +5,5 @@
 
     <body>
         <h1>Hello Man!</h1>
-        <fb:login-button v="2" size="xlarge" onlogin="onFacebookConnect();">
-            Login with Facebook
-        </fb:login-button>
-        <div id="fb-root"></div>
-        <script type="text/javascript">
-                window.fbAsyncInit = function() {
-                    FB.init({
-                        appId      : '{{ facebookAppId }}',
-                        status     : true,
-                        cookie     : true,
-                        xfbml      : true
-                    });
-
-                    FB.Event.subscribe('auth.login', function(response) {
-                        window.location.reload();
-                    });
-                };
-
-                function onFacebookConnect() {
-                    window.location.reload();
-                }
-
-                (function(d){
-                    var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-                    js = d.createElement('script'); js.id = id; js.async = true;
-                    js.src = "//connect.facebook.net/en_US/all.js";
-                    d.getElementsByTagName('head')[0].appendChild(js);
-                }(document));
-        </script>
     </body>
 </html>
