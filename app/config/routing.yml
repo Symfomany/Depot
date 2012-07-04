@@ -1,0 +1,18 @@
+BetaBundle:
+    resource: "@BetaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#Facebook Routing
+#_facebook_secured:
+#    pattern: /secured/
+#    defaults: { _controller: BetaBundle:Default:index }
+          
+_security_check:
+    pattern:  /login_check
+_security_logout:
+    pattern:  /logout
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

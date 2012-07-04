@@ -1,0 +1,3 @@
+BetaBundle_homepage:
+    pattern:  /
+    defaults: { _controller: BetaBundle:Default:index }
