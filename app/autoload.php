@@ -7,6 +7,9 @@ $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
     'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
     'Sensio'           => __DIR__.'/../vendor/bundles',
+    'FOS\\Rest'        => __DIR__.'/../vendor/fos',
+    'FOS\\Rest'        => __DIR__.'/../vendor/fos',
+    'FOS'              => __DIR__.'/../vendor/bundles',   
     'JMS'              => __DIR__.'/../vendor/bundles',
     'Doctrine\\Common' => __DIR__.'/../vendor/doctrine-common/lib',
     'Doctrine\\DBAL'   => __DIR__.'/../vendor/doctrine-dbal/lib',
@@ -15,7 +18,7 @@ $loader->registerNamespaces(array(
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
     'Facebook'         => __DIR__.'/../vendor/facebook/src',
-    'FOS'              => __DIR__.'/../vendor/bundles',
+
 //    'Genemu'           => __DIR__.'/../vendor/bundles'
 ));
 $loader->registerPrefixes(array(

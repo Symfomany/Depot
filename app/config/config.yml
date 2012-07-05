@@ -15,6 +15,10 @@ framework:
     session:
         default_locale: %locale%
         auto_start:     true
+        
+sensio_framework_extra:
+    view:
+        annotations: false
 
 # Twig Configuration
 twig:
@@ -58,6 +62,14 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+    
+#jms_serializer:
+#    metadata:
+#        auto_detection: true
+#        directories:
+#            FOSUserBundle:
+#                namespace_prefix: FOS\UserBundle
+#                path: "@BetaBundle/Resources/config/serializer/fos"
 
  # application/config/config.yml
 fos_facebook:
@@ -67,4 +79,18 @@ fos_facebook:
     secret: cc69538949136be77f3302e26f6a6f2b
     cookie: true
     permissions: [email, user_birthday, user_location]
+    
+    
+fos_rest:
+    view:
+        view_response_listener: false
+        failed_validation: HTTP_BAD_REQUEST
+        default_engine: php
+        formats:
+            json: true
+    format_listener:
+        prefer_extension: true
+    body_listener:
+        decoders:
+            json: fos_rest.decoder.json
     

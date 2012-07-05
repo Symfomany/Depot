@@ -18,9 +18,8 @@
 
 namespace Metadata;
 
-use Metadata\Cache\CacheInterface;
-
 use Metadata\Driver\DriverInterface;
+use Metadata\Cache\CacheInterface;
 
 final class MetadataFactory implements MetadataFactoryInterface
 {
@@ -29,6 +28,7 @@ final class MetadataFactory implements MetadataFactoryInterface
     private $loadedMetadata = array();
     private $loadedClassMetadata = array();
     private $hierarchyMetadataClass;
+    private $includeInterfaces = false;
     private $debug;
 
     public function __construct(DriverInterface $driver, $hierarchyMetadataClass = 'Metadata\ClassHierarchyMetadata', $debug = false)
@@ -36,6 +36,11 @@ final class MetadataFactory implements MetadataFactoryInterface
         $this->driver = $driver;
         $this->hierarchyMetadataClass = $hierarchyMetadataClass;
         $this->debug = $debug;
+    }
+
+    public function setIncludeInterfaces($bool)
+    {
+        $this->includeInterfaces = (Boolean) $bool;
     }
 
     public function setCache(CacheInterface $cache)
@@ -49,10 +54,10 @@ final class MetadataFactory implements MetadataFactoryInterface
             return $this->loadedMetadata[$className];
         }
 
-        $metadata = new $this->hierarchyMetadataClass;
+        $metadata = null;
         foreach ($this->getClassHierarchy($className) as $class) {
             if (isset($this->loadedClassMetadata[$name = $class->getName()])) {
-                $metadata->addClassMetadata($this->loadedClassMetadata[$name]);
+                $this->addClassMetadata($metadata, $this->loadedClassMetadata[$name]);
                 continue;
             }
 
@@ -63,7 +68,7 @@ final class MetadataFactory implements MetadataFactoryInterface
                     $this->cache->evictClassMetadataFromCache($classMetadata->reflection);
                 } else {
                     $this->loadedClassMetadata[$name] = $classMetadata;
-                    $metadata->addClassMetadata($classMetadata);
+                    $this->addClassMetadata($metadata, $classMetadata);
                     continue;
                 }
             }
@@ -71,7 +76,7 @@ final class MetadataFactory implements MetadataFactoryInterface
             // load from source
             if (null !== $classMetadata = $this->driver->loadMetadataForClass($class)) {
                 $this->loadedClassMetadata[$name] = $classMetadata;
-                $metadata->addClassMetadata($classMetadata);
+                $this->addClassMetadata($metadata, $classMetadata);
 
                 if (null !== $this->cache) {
                     $this->cache->putClassMetadataInCache($classMetadata);
@@ -81,11 +86,24 @@ final class MetadataFactory implements MetadataFactoryInterface
             }
         }
 
-        if (!$metadata->classMetadata) {
-            return null;
-        }
-
         return $this->loadedMetadata[$className] = $metadata;
+    }
+
+    private function addClassMetadata(&$metadata, $toAdd)
+    {
+        if ($toAdd instanceof MergeableInterface) {
+            if (null === $metadata) {
+                $metadata = clone $toAdd;
+            } else {
+                $metadata->merge($toAdd);
+            }
+        } else {
+            if (null === $metadata) {
+                $metadata = new $this->hierarchyMetadataClass;
+            }
+
+            $metadata->addClassMetadata($toAdd);
+        }
     }
 
     private function getClassHierarchy($class)
@@ -97,6 +115,28 @@ final class MetadataFactory implements MetadataFactoryInterface
             $classes[] = $refl;
         } while (false !== $refl = $refl->getParentClass());
 
-        return array_reverse($classes, false);
+        $classes = array_reverse($classes, false);
+
+        if (!$this->includeInterfaces) {
+            return $classes;
+        }
+
+        $addedInterfaces = array();
+        $newHierarchy = array();
+
+        foreach ($classes as $class) {
+            foreach ($class->getInterfaces() as $interface) {
+                if (isset($addedInterfaces[$interface->getName()])) {
+                    continue;
+                }
+                $addedInterfaces[$interface->getName()] = true;
+
+                $newHierarchy[] = $interface;
+            }
+
+            $newHierarchy[] = $class;
+        }
+
+        return $newHierarchy;
     }
 }

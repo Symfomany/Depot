@@ -33,6 +33,8 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_step' => true,
        '_configurator_final' => true,
        'BetaBundle_homepage' => true,
+       'index' => true,
+       'test' => true,
        '_security_check' => true,
        '_security_logout' => true,
     );
@@ -156,6 +158,16 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getBetaBundle_homepageRouteInfo()
     {
         return array(array (), array (  '_controller' => 'Alpha\\BetaBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function getindexRouteInfo()
+    {
+        return array(array (  0 => '_format',), array (  '_controller' => 'Alpha\\BetaBundle\\Controller\\DefaultController::indexAction',  '_format' => NULL,), array (  '_method' => 'GET',), array (  0 =>   array (    0 => 'variable',    1 => '.',    2 => '[^/]+?',    3 => '_format',  ),  1 =>   array (    0 => 'text',    1 => '/api/index',  ),));
+    }
+
+    private function gettestRouteInfo()
+    {
+        return array(array (  0 => '_format',), array (  '_controller' => 'Alpha\\BetaBundle\\Controller\\DefaultController::testAction',  '_format' => NULL,), array (  '_method' => 'GET',), array (  0 =>   array (    0 => 'variable',    1 => '.',    2 => '[^/]+?',    3 => '_format',  ),  1 =>   array (    0 => 'text',    1 => '/api/test',  ),));
     }
 
     private function get_security_checkRouteInfo()
