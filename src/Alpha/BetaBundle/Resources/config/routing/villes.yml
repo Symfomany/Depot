@@ -1,0 +1,10 @@
+villes:
+    pattern:  /
+    defaults: { _controller: "BetaBundle:Villes:index" }
+
+villes_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BetaBundle:Villes:show" }
+
+
+

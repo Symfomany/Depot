@@ -6,43 +6,48 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Alpha\BetaBundle\Entity\Test
+ *
  * @ORM\Table(name="test")
- * @ORM\Entity(repositoryClass="Alpha\BetaBundle\Repository\TestRepository")
+ * @ORM\Entity
  */
-class Test {
-
+class Test
+{
     /**
-     * @var bigint $id
+     * @var integer $id
      *
-     * @ORM\Column(name="id", type="bigint", nullable=false)
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
+    private $id;
 
     /**
-     * @ORM\Column(type="string", length="255")
+     * @var string $nom
      *
+     * @ORM\Column(name="nom", type="string", length=80, nullable=false)
      */
-    protected $nom;
+    private $nom;
 
     /**
-     * @ORM\Column(type="string", length="255", nullable=false)
+     * @var string $prenom
      *
+     * @ORM\Column(name="prenom", type="string", length=80, nullable=false)
      */
-    protected $prenom;
+    private $prenom;
 
     /**
-     * @ORM\Column(type="string")
+     * @var string $email
      *
+     * @ORM\Column(name="email", type="string", length=80, nullable=false)
      */
-    protected $email;
+    private $email;
+
 
 
     /**
      * Get id
      *
-     * @return bigint 
+     * @return integer 
      */
     public function getId()
     {
@@ -92,9 +97,9 @@ class Test {
     /**
      * Set email
      *
-     * @param email $email
+     * @param string $email
      */
-    public function setEmail( $email)
+    public function setEmail($email)
     {
         $this->email = $email;
     }
@@ -102,7 +107,7 @@ class Test {
     /**
      * Get email
      *
-     * @return email 
+     * @return string 
      */
     public function getEmail()
     {

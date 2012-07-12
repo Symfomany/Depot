@@ -6,106 +6,41 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Alpha\BetaBundle\Entity\Test
+ *
  * @ORM\Table(name="test")
  * @ORM\Entity
  */
-class Test {
-
+class Test
+{
     /**
-     * @var bigint $id
+     * @var integer $id
      *
-     * @ORM\Column(name="id", type="bigint", nullable=false)
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
+    private $id;
 
     /**
-     * @ORM\Column(type="string", length="255")
+     * @var string $nom
      *
+     * @ORM\Column(name="nom", type="string", length=80, nullable=false)
      */
-    protected $nom;
+    private $nom;
 
     /**
-     * @ORM\Column(type="string", length="255", nullable=false)
+     * @var string $prenom
      *
+     * @ORM\Column(name="prenom", type="string", length=80, nullable=false)
      */
-    protected $prenom;
+    private $prenom;
 
     /**
-     * @ORM\Column(type="email")
+     * @var string $email
      *
+     * @ORM\Column(name="email", type="string", length=80, nullable=false)
      */
-    protected $email;
+    private $email;
 
 
-    /**
-     * Get id
-     *
-     * @return bigint 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set nom
-     *
-     * @param string $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
-
-    /**
-     * Get nom
-     *
-     * @return string 
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * Set prenom
-     *
-     * @param string $prenom
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
-
-    /**
-     * Get prenom
-     *
-     * @return string 
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
-    /**
-     * Set email
-     *
-     * @param email $email
-     */
-    public function setEmail(\email $email)
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * Get email
-     *
-     * @return email 
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
 }

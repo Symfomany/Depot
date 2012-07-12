@@ -1,0 +1,1 @@
+[2012-07-12 09:12:33] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /villes" (uncaught exception) at C:\wamp\www\emeraude\vendor\symfony\src\Symfony\Bundle\FrameworkBundle\EventListener\RouterListener.php line 83 [] []

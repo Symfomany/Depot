@@ -1,0 +1,46 @@
+<?php
+
+namespace Alpha\BetaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Alpha\BetaBundle\Entity\Departement
+ *
+ * @ORM\Table(name="departement")
+ * @ORM\Entity
+ */
+class Departement
+{
+    /**
+     * @var integer $idDepartement
+     *
+     * @ORM\Column(name="id_departement", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idDepartement;
+
+    /**
+     * @var integer $idRegion
+     *
+     * @ORM\Column(name="id_region", type="integer", nullable=false)
+     */
+    private $idRegion;
+
+    /**
+     * @var string $code
+     *
+     * @ORM\Column(name="code", type="string", length=3, nullable=false)
+     */
+    private $code;
+
+    /**
+     * @var string $nomDepartement
+     *
+     * @ORM\Column(name="nom_departement", type="string", length=250, nullable=false)
+     */
+    private $nomDepartement;
+
+
+}
