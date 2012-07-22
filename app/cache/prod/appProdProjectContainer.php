@@ -23,11 +23,16 @@ class appProdProjectContainer extends Container
     }
     protected function getAnnotationReaderService()
     {
+<<<<<<< HEAD
         return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/wamp/www/github/Depot/app/cache/prod/annotations', false);
+=======
+        return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/wamp/www/emeraude/app/cache/prod/annotations', false);
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getAssetic_AssetManagerService()
     {
         $a = $this->get('templating.loader');
+<<<<<<< HEAD
         $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/wamp/www/github/Depot/app/cache/prod/assetic/config'), false)));
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:/wamp/www/github/Depot/app/Resources/FrameworkBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SecurityBundle', 'C:/wamp/www/github/Depot/app/Resources/SecurityBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SecurityBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
@@ -41,6 +46,23 @@ class appProdProjectContainer extends Container
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:/wamp/www/github/Depot/app/Resources/BetaBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:\\wamp\\www\\github\\Depot\\src\\Alpha\\BetaBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:/wamp/www/github/Depot/app/Resources/FOSFacebookBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\FOS\\FacebookBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', 'C:/wamp/www/github/Depot/app/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'), 'twig');
+=======
+        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/wamp/www/emeraude/app/cache/prod/assetic/config'), false)));
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:/wamp/www/emeraude/app/Resources/FrameworkBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SecurityBundle', 'C:/wamp/www/emeraude/app/Resources/SecurityBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SecurityBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'TwigBundle', 'C:/wamp/www/emeraude/app/Resources/TwigBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'TwigBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'MonologBundle', 'C:/wamp/www/emeraude/app/Resources/MonologBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'MonologBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\MonologBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SwiftmailerBundle', 'C:/wamp/www/emeraude/app/Resources/SwiftmailerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SwiftmailerBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'DoctrineBundle', 'C:/wamp/www/emeraude/app/Resources/DoctrineBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'DoctrineBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\DoctrineBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AsseticBundle', 'C:/wamp/www/emeraude/app/Resources/AsseticBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AsseticBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Symfony\\Bundle\\AsseticBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioFrameworkExtraBundle', 'C:/wamp/www/emeraude/app/Resources/SensioFrameworkExtraBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioFrameworkExtraBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\FrameworkExtraBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSecurityExtraBundle', 'C:/wamp/www/emeraude/app/Resources/JMSSecurityExtraBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSecurityExtraBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SecurityExtraBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:/wamp/www/emeraude/app/Resources/BetaBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:\\wamp\\www\\emeraude\\src\\Alpha\\BetaBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:/wamp/www/emeraude/app/Resources/FOSFacebookBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\FacebookBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSerializerBundle', 'C:/wamp/www/emeraude/app/Resources/JMSSerializerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSerializerBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SerializerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSRestBundle', 'C:/wamp/www/emeraude/app/Resources/FOSRestBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSRestBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\RestBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', 'C:/wamp/www/emeraude/app/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'), 'twig');
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
         return $instance;
     }
     protected function getAssetic_Filter_CssrewriteService()
@@ -55,8 +77,13 @@ class appProdProjectContainer extends Container
     {
         $a = $this->get('kernel');
         $b = $this->get('templating.name_parser');
+<<<<<<< HEAD
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/wamp/www/github/Depot/app/Resources');
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer($this), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 3 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c), 4 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine')), 5 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetWriterCacheWarmer($this, new \Assetic\AssetWriter('C:/wamp/www/github/Depot/app/../web'))));
+=======
+        $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/wamp/www/emeraude/app/Resources');
+        return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer($this), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 3 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c), 4 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine')), 5 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetWriterCacheWarmer($this, new \Assetic\AssetWriter('C:/wamp/www/emeraude/app/../web'))));
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getDoctrineService()
     {
@@ -75,6 +102,7 @@ class appProdProjectContainer extends Container
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
         $a = new \Doctrine\Common\Cache\ArrayCache();
+<<<<<<< HEAD
         $a->setNamespace('sf2orm_default_ead646ef0989f5752ddfa49e2fb753eb');
         $b = new \Doctrine\Common\Cache\ArrayCache();
         $b->setNamespace('sf2orm_default_ead646ef0989f5752ddfa49e2fb753eb');
@@ -91,6 +119,26 @@ class appProdProjectContainer extends Container
         $d->setAutoGenerateProxyClasses(false);
         $d->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
         return $this->services['doctrine.orm.default_entity_manager'] = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $d);
+=======
+        $a->setNamespace('sf2orm_default_b6e7fb9676d47ddb29e14d5a4d4c3e49');
+        $b = new \Doctrine\Common\Cache\ArrayCache();
+        $b->setNamespace('sf2orm_default_b6e7fb9676d47ddb29e14d5a4d4c3e49');
+        $c = new \Doctrine\Common\Cache\ArrayCache();
+        $c->setNamespace('sf2orm_default_b6e7fb9676d47ddb29e14d5a4d4c3e49');
+        $d = new \Doctrine\ORM\Mapping\Driver\DriverChain();
+        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(new \Symfony\Bridge\Doctrine\Annotations\IndexedReader($this->get('annotation_reader')), array(0 => 'C:\\wamp\\www\\emeraude\\src\\Alpha\\BetaBundle\\Entity')), 'Alpha\\BetaBundle\\Entity');
+        $e = new \Doctrine\ORM\Configuration();
+        $e->setEntityNamespaces(array('BetaBundle' => 'Alpha\\BetaBundle\\Entity'));
+        $e->setMetadataCacheImpl($a);
+        $e->setQueryCacheImpl($b);
+        $e->setResultCacheImpl($c);
+        $e->setMetadataDriverImpl($d);
+        $e->setProxyDir('C:/wamp/www/emeraude/app/cache/prod/doctrine/orm/Proxies');
+        $e->setProxyNamespace('Proxies');
+        $e->setAutoGenerateProxyClasses(false);
+        $e->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        return $this->services['doctrine.orm.default_entity_manager'] = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $e);
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getDoctrine_Orm_Validator_UniqueService()
     {
@@ -112,16 +160,20 @@ class appProdProjectContainer extends Container
         $instance->addListenerService('kernel.exception', array(0 => 'twig.exception_listener', 1 => 'onKernelException'), -128);
         $instance->addListenerService('kernel.controller', array(0 => 'sensio_framework_extra.controller.listener', 1 => 'onKernelController'), 0);
         $instance->addListenerService('kernel.controller', array(0 => 'sensio_framework_extra.converter.listener', 1 => 'onKernelController'), 0);
-        $instance->addListenerService('kernel.controller', array(0 => 'sensio_framework_extra.view.listener', 1 => 'onKernelController'), 0);
-        $instance->addListenerService('kernel.view', array(0 => 'sensio_framework_extra.view.listener', 1 => 'onKernelView'), 0);
         $instance->addListenerService('kernel.response', array(0 => 'sensio_framework_extra.cache.listener', 1 => 'onKernelResponse'), 0);
         $instance->addListenerService('kernel.controller', array(0 => 'security.extra.controller_listener', 1 => 'onCoreController'), -255);
         $instance->addListenerService('kernel.controller', array(0 => 'acme.demo.listener', 1 => 'onKernelController'), 0);
+        $instance->addListenerService('kernel.request', array(0 => 'fos_rest.body_listener', 1 => 'onKernelRequest'), 0);
+        $instance->addListenerService('kernel.controller', array(0 => 'fos_rest.format_listener', 1 => 'onKernelController'), 0);
         return $instance;
     }
     protected function getFileLocatorService()
     {
+<<<<<<< HEAD
         return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/wamp/www/github/Depot/app/Resources');
+=======
+        return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/wamp/www/emeraude/app/Resources');
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getFilesystemService()
     {
@@ -269,7 +321,11 @@ class appProdProjectContainer extends Container
     }
     protected function getFosFacebook_ApiService()
     {
+<<<<<<< HEAD
         require_once 'C:/wamp/www/github/Depot/app/../vendor/facebook/src/base_facebook.php';
+=======
+        require_once 'C:/wamp/www/emeraude/app/../vendor/facebook/src/base_facebook.php';
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
         return $this->services['fos_facebook.api'] = new \FOS\FacebookBundle\Facebook\FacebookSessionPersistence(array('appId' => '133620996704145', 'secret' => 'cc69538949136be77f3302e26f6a6f2b', 'cookie' => true, 'domain' => NULL), $this->get('session'));
     }
     protected function getFosFacebook_HelperService()
@@ -280,9 +336,109 @@ class appProdProjectContainer extends Container
     {
         return $this->services['fos_facebook.twig'] = new \FOS\FacebookBundle\Twig\Extension\FacebookExtension($this);
     }
+    protected function getFosRest_BodyListenerService()
+    {
+        return $this->services['fos_rest.body_listener'] = new \FOS\RestBundle\EventListener\BodyListener($this->get('fos_rest.decoder_provider'));
+    }
+    protected function getFosRest_Decoder_JsonService()
+    {
+        return $this->services['fos_rest.decoder.json'] = new \FOS\Rest\Decoder\JsonDecoder();
+    }
+    protected function getFosRest_Decoder_XmlService()
+    {
+        return $this->services['fos_rest.decoder.xml'] = new \FOS\Rest\Decoder\XmlDecoder();
+    }
+    protected function getFosRest_DecoderProviderService()
+    {
+        $this->services['fos_rest.decoder_provider'] = $instance = new \FOS\RestBundle\Decoder\ContainerDecoderProvider(array('json' => 'fos_rest.decoder.json'));
+        $instance->setContainer($this);
+        return $instance;
+    }
+    protected function getFosRest_FormatListenerService()
+    {
+        return $this->services['fos_rest.format_listener'] = new \FOS\RestBundle\EventListener\FormatListener($this->get('fos_rest.format_negotiator'), 'html', array(0 => 'html', 1 => '*/*'), true);
+    }
+    protected function getFosRest_FormatNegotiatorService()
+    {
+        return $this->services['fos_rest.format_negotiator'] = new \FOS\Rest\Util\FormatNegotiator();
+    }
+    protected function getFosRest_Request_ParamFetcherService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('fos_rest.request.param_fetcher', 'request');
+        }
+        return $this->services['fos_rest.request.param_fetcher'] = $this->scopedServices['request']['fos_rest.request.param_fetcher'] = new \FOS\RestBundle\Request\ParamFetcher($this->get('fos_rest.request.param_fetcher.reader'), $this->get('request'));
+    }
+    protected function getFosRest_Request_ParamFetcher_ReaderService()
+    {
+        return $this->services['fos_rest.request.param_fetcher.reader'] = new \FOS\RestBundle\Request\ParamReader($this->get('annotation_reader'));
+    }
+    protected function getFosRest_Routing_Loader_ControllerService()
+    {
+        return $this->services['fos_rest.routing.loader.controller'] = new \FOS\RestBundle\Routing\Loader\RestRouteLoader20($this, $this->get('controller_name_converter'), $this->get('fos_rest.routing.loader.reader.controller'), NULL);
+    }
+    protected function getFosRest_Routing_Loader_ProcessorService()
+    {
+        return $this->services['fos_rest.routing.loader.processor'] = new \FOS\RestBundle\Routing\Loader\RestRouteProcessor();
+    }
+    protected function getFosRest_Routing_Loader_Reader_ActionService()
+    {
+        return $this->services['fos_rest.routing.loader.reader.action'] = new \FOS\RestBundle\Routing\Loader\Reader\RestActionReader($this->get('annotation_reader'), $this->get('fos_rest.request.param_fetcher.reader'));
+    }
+    protected function getFosRest_Routing_Loader_Reader_ControllerService()
+    {
+        return $this->services['fos_rest.routing.loader.reader.controller'] = new \FOS\RestBundle\Routing\Loader\Reader\RestControllerReader($this->get('fos_rest.routing.loader.reader.action'), $this->get('annotation_reader'));
+    }
+    protected function getFosRest_Routing_Loader_XmlCollectionService()
+    {
+        return $this->services['fos_rest.routing.loader.xml_collection'] = new \FOS\RestBundle\Routing\Loader\RestXmlCollectionLoader($this->get('file_locator'), $this->get('fos_rest.routing.loader.processor'));
+    }
+    protected function getFosRest_Routing_Loader_YamlCollectionService()
+    {
+        return $this->services['fos_rest.routing.loader.yaml_collection'] = new \FOS\RestBundle\Routing\Loader\RestYamlCollectionLoader($this->get('file_locator'), $this->get('fos_rest.routing.loader.processor'));
+    }
+    protected function getFosRest_ViewHandlerService()
+    {
+        $this->services['fos_rest.view_handler'] = $instance = new \FOS\RestBundle\View\ViewHandler(array('json' => false, 'html' => true), 400, array('html' => 302), 'php');
+        $instance->setContainer($this);
+        return $instance;
+    }
     protected function getHttpKernelService()
     {
         return $this->services['http_kernel'] = new \Symfony\Bundle\FrameworkBundle\HttpKernel($this->get('event_dispatcher'), $this, new \Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver($this, $this->get('controller_name_converter'), $this->get('monolog.logger.request')));
+    }
+    protected function getJmsSerializer_JsonDeserializationVisitorService()
+    {
+        return $this->services['jms_serializer.json_deserialization_visitor'] = new \JMS\SerializerBundle\Serializer\JsonDeserializationVisitor($this->get('jms_serializer.naming_strategy'), array(0 => $this->get('jms_serializer.array_collection_handler'), 1 => $this->get('jms_serializer.datetime_handler')), $this->get('jms_serializer.unserialize_object_constructor'));
+    }
+    protected function getJmsSerializer_JsonSerializationVisitorService()
+    {
+        return $this->services['jms_serializer.json_serialization_visitor'] = new \JMS\SerializerBundle\Serializer\JsonSerializationVisitor($this->get('jms_serializer.naming_strategy'), array(0 => $this->get('jms_serializer.doctrine_handler'), 1 => $this->get('jms_serializer.constraint_violation_handler'), 2 => $this->get('jms_serializer.datetime_handler'), 3 => $this->get('jms_serializer.form_error_handler')));
+    }
+    protected function getJmsSerializer_Metadata_LazyLoadingDriverService()
+    {
+        return $this->services['jms_serializer.metadata.lazy_loading_driver'] = new \Metadata\Driver\LazyLoadingDriver($this, 'jms_serializer.metadata_driver');
+    }
+    protected function getJmsSerializer_MetadataDriverService()
+    {
+        $a = new \Metadata\Driver\FileLocator(array('Symfony\\Bundle\\FrameworkBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/config/serializer', 'Symfony\\Bundle\\SecurityBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/config/serializer', 'Symfony\\Bundle\\TwigBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/config/serializer', 'Symfony\\Bundle\\MonologBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\MonologBundle/Resources/config/serializer', 'Symfony\\Bundle\\SwiftmailerBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SwiftmailerBundle/Resources/config/serializer', 'Symfony\\Bundle\\DoctrineBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\DoctrineBundle/Resources/config/serializer', 'Symfony\\Bundle\\AsseticBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Symfony\\Bundle\\AsseticBundle/Resources/config/serializer', 'Sensio\\Bundle\\FrameworkExtraBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\FrameworkExtraBundle/Resources/config/serializer', 'JMS\\SecurityExtraBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SecurityExtraBundle/Resources/config/serializer', 'Alpha\\BetaBundle' => 'C:\\wamp\\www\\emeraude\\src\\Alpha\\BetaBundle/Resources/config/serializer', 'FOS\\FacebookBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\FacebookBundle/Resources/config/serializer', 'JMS\\SerializerBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SerializerBundle/Resources/config/serializer', 'FOS\\RestBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\RestBundle/Resources/config/serializer'));
+        return $this->services['jms_serializer.metadata_driver'] = new \Metadata\Driver\DriverChain(array(0 => new \JMS\SerializerBundle\Metadata\Driver\YamlDriver($a), 1 => new \JMS\SerializerBundle\Metadata\Driver\XmlDriver($a), 2 => new \JMS\SerializerBundle\Metadata\Driver\PhpDriver($a), 3 => new \JMS\SerializerBundle\Metadata\Driver\AnnotationDriver($this->get('annotation_reader'))));
+    }
+    protected function getJmsSerializer_NamingStrategyService()
+    {
+        return $this->services['jms_serializer.naming_strategy'] = new \JMS\SerializerBundle\Serializer\Naming\CacheNamingStrategy(new \JMS\SerializerBundle\Serializer\Naming\SerializedNameAnnotationStrategy(new \JMS\SerializerBundle\Serializer\Naming\CamelCaseNamingStrategy('_', true)));
+    }
+    protected function getJmsSerializer_XmlDeserializationVisitorService()
+    {
+        return $this->services['jms_serializer.xml_deserialization_visitor'] = new \JMS\SerializerBundle\Serializer\XmlDeserializationVisitor($this->get('jms_serializer.naming_strategy'), array(0 => $this->get('jms_serializer.array_collection_handler'), 1 => $this->get('jms_serializer.datetime_handler')), $this->get('jms_serializer.unserialize_object_constructor'));
+    }
+    protected function getJmsSerializer_XmlSerializationVisitorService()
+    {
+        return $this->services['jms_serializer.xml_serialization_visitor'] = new \JMS\SerializerBundle\Serializer\XmlSerializationVisitor($this->get('jms_serializer.naming_strategy'), array(0 => $this->get('jms_serializer.doctrine_handler'), 1 => $this->get('jms_serializer.constraint_violation_handler'), 2 => $this->get('jms_serializer.datetime_handler'), 3 => $this->get('jms_serializer.form_error_handler')));
+    }
+    protected function getJmsSerializer_YamlSerializationVisitorService()
+    {
+        return $this->services['jms_serializer.yaml_serialization_visitor'] = new \JMS\SerializerBundle\Serializer\YamlSerializationVisitor($this->get('jms_serializer.naming_strategy'), array(0 => $this->get('jms_serializer.doctrine_handler'), 1 => $this->get('jms_serializer.constraint_violation_handler'), 2 => $this->get('jms_serializer.datetime_handler'), 3 => $this->get('jms_serializer.form_error_handler')));
     }
     protected function getKernelService()
     {
@@ -304,7 +460,11 @@ class appProdProjectContainer extends Container
     }
     protected function getMonolog_Handler_NestedService()
     {
+<<<<<<< HEAD
         return $this->services['monolog.handler.nested'] = new \Monolog\Handler\StreamHandler('C:/wamp/www/github/Depot/app/logs/prod.log', 100, true);
+=======
+        return $this->services['monolog.handler.nested'] = new \Monolog\Handler\StreamHandler('C:/wamp/www/emeraude/app/logs/prod.log', 100, true);
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getMonolog_Logger_DoctrineService()
     {
@@ -343,7 +503,11 @@ class appProdProjectContainer extends Container
     }
     protected function getRouterService()
     {
+<<<<<<< HEAD
         return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/wamp/www/github/Depot/app/config/routing.yml', array('cache_dir' => 'C:/wamp/www/github/Depot/app/cache/prod', 'debug' => false, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appprodUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appprodUrlMatcher'));
+=======
+        return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/wamp/www/emeraude/app/config/routing.yml', array('cache_dir' => 'C:/wamp/www/emeraude/app/cache/prod', 'debug' => false, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appprodUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appprodUrlMatcher'));
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getRouterListenerService()
     {
@@ -361,6 +525,9 @@ class appProdProjectContainer extends Container
         $d->addLoader(new \Symfony\Component\Routing\Loader\AnnotationDirectoryLoader($a, $c));
         $d->addLoader(new \Symfony\Component\Routing\Loader\AnnotationFileLoader($a, $c));
         $d->addLoader($c);
+        $d->addLoader($this->get('fos_rest.routing.loader.controller'));
+        $d->addLoader($this->get('fos_rest.routing.loader.yaml_collection'));
+        $d->addLoader($this->get('fos_rest.routing.loader.xml_collection'));
         return $this->services['routing.loader'] = new \Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader($this->get('controller_name_converter'), $this->get('monolog.logger.router'), $d);
     }
     protected function getSecurity_Access_MethodInterceptorService()
@@ -434,9 +601,13 @@ class appProdProjectContainer extends Container
         $instance->add($this->get('sensio_framework_extra.converter.doctrine.orm'), 0);
         return $instance;
     }
-    protected function getSensioFrameworkExtra_View_ListenerService()
+    protected function getSerializerService()
     {
-        return $this->services['sensio_framework_extra.view.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener($this);
+        $a = new \Metadata\MetadataFactory($this->get('jms_serializer.metadata.lazy_loading_driver'), 'Metadata\\ClassHierarchyMetadata', false);
+        $a->setCache(new \Metadata\Cache\FileCache('C:/wamp/www/emeraude/app/cache/prod/jms_serializer'));
+        $this->services['serializer'] = $instance = new \JMS\SerializerBundle\Serializer\LazyLoadingSerializer($a, array('json' => 'jms_serializer.json_serialization_visitor', 'xml' => 'jms_serializer.xml_serialization_visitor', 'yml' => 'jms_serializer.yaml_serialization_visitor'), array('json' => 'jms_serializer.json_deserialization_visitor', 'xml' => 'jms_serializer.xml_deserialization_visitor'));
+        $instance->setContainer($this);
+        return $instance;
     }
     protected function getServiceContainerService()
     {
@@ -494,7 +665,11 @@ class appProdProjectContainer extends Container
     }
     protected function getTemplating_Helper_CodeService()
     {
+<<<<<<< HEAD
         return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/wamp/www/github/Depot/app', 'UTF-8');
+=======
+        return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/wamp/www/emeraude/app', 'UTF-8');
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getTemplating_Helper_FormService()
     {
@@ -553,11 +728,19 @@ class appProdProjectContainer extends Container
     }
     protected function getTranslator_DefaultService()
     {
+<<<<<<< HEAD
         return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => 'php', 'translation.loader.yml' => 'yml', 'translation.loader.xliff' => 'xliff'), array('cache_dir' => 'C:/wamp/www/github/Depot/app/cache/prod/translations', 'debug' => false), $this->get('session'));
     }
     protected function getTwigService()
     {
         $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => false, 'strict_variables' => false, 'exception_controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction', 'cache' => 'C:/wamp/www/github/Depot/app/cache/prod/twig', 'charset' => 'UTF-8'));
+=======
+        return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => 'php', 'translation.loader.yml' => 'yml', 'translation.loader.xliff' => 'xliff'), array('cache_dir' => 'C:/wamp/www/emeraude/app/cache/prod/translations', 'debug' => false), $this->get('session'));
+    }
+    protected function getTwigService()
+    {
+        $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => false, 'strict_variables' => false, 'exception_controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction', 'cache' => 'C:/wamp/www/emeraude/app/cache/prod/twig', 'charset' => 'UTF-8'));
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
         $instance->addExtension(new \Symfony\Bundle\SecurityBundle\Twig\Extension\SecurityExtension($this->get('security.context')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator')));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\AssetsExtension($this));
@@ -569,6 +752,7 @@ class appProdProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), false, array()));
         $instance->addExtension($this->get('twig.extension.acme.demo'));
         $instance->addExtension($this->get('fos_facebook.twig'));
+        $instance->addExtension(new \JMS\SerializerBundle\Twig\SerializerExtension($this->get('serializer')));
         return $instance;
     }
     protected function getTwig_ExceptionListenerService()
@@ -578,7 +762,11 @@ class appProdProjectContainer extends Container
     protected function getTwig_LoaderService()
     {
         $this->services['twig.loader'] = $instance = new \Symfony\Bundle\TwigBundle\Loader\FilesystemLoader($this->get('templating.locator'), $this->get('templating.name_parser'));
+<<<<<<< HEAD
         $instance->addPath('C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
+=======
+        $instance->addPath('C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
         return $instance;
     }
     protected function getValidatorService()
@@ -597,13 +785,53 @@ class appProdProjectContainer extends Container
     {
         return $this->get('fos_facebook.api');
     }
+    protected function getFosRest_RouterService()
+    {
+        return $this->get('router');
+    }
+    protected function getFosRest_SerializerService()
+    {
+        return $this->get('serializer');
+    }
+    protected function getFosRest_TemplatingService()
+    {
+        return $this->get('templating');
+    }
     protected function getAssetic_AssetFactoryService()
     {
+<<<<<<< HEAD
         return $this->services['assetic.asset_factory'] = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, new \Symfony\Component\DependencyInjection\ParameterBag\ParameterBag($this->getDefaultParameters()), 'C:/wamp/www/github/Depot/app/../web', false);
+=======
+        return $this->services['assetic.asset_factory'] = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, new \Symfony\Component\DependencyInjection\ParameterBag\ParameterBag($this->getDefaultParameters()), 'C:/wamp/www/emeraude/app/../web', false);
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getControllerNameConverterService()
     {
         return $this->services['controller_name_converter'] = new \Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser($this->get('kernel'));
+    }
+    protected function getJmsSerializer_ArrayCollectionHandlerService()
+    {
+        return $this->services['jms_serializer.array_collection_handler'] = new \JMS\SerializerBundle\Serializer\Handler\ArrayCollectionHandler();
+    }
+    protected function getJmsSerializer_ConstraintViolationHandlerService()
+    {
+        return $this->services['jms_serializer.constraint_violation_handler'] = new \JMS\SerializerBundle\Serializer\Handler\ConstraintViolationHandler();
+    }
+    protected function getJmsSerializer_DatetimeHandlerService()
+    {
+        return $this->services['jms_serializer.datetime_handler'] = new \JMS\SerializerBundle\Serializer\Handler\DateTimeHandler('Y-m-d\\TH:i:sO', 'UTC');
+    }
+    protected function getJmsSerializer_DoctrineHandlerService()
+    {
+        return $this->services['jms_serializer.doctrine_handler'] = new \JMS\SerializerBundle\Serializer\Handler\DoctrineProxyHandler();
+    }
+    protected function getJmsSerializer_FormErrorHandlerService()
+    {
+        return $this->services['jms_serializer.form_error_handler'] = new \JMS\SerializerBundle\Serializer\Handler\FormErrorHandler($this->get('translator'));
+    }
+    protected function getJmsSerializer_UnserializeObjectConstructorService()
+    {
+        return $this->services['jms_serializer.unserialize_object_constructor'] = new \JMS\SerializerBundle\Serializer\Construction\UnserializeObjectConstructor();
     }
     protected function getSecurity_Access_DecisionManagerService()
     {
@@ -627,7 +855,11 @@ class appProdProjectContainer extends Container
     }
     protected function getTemplating_LocatorService()
     {
+<<<<<<< HEAD
         return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/wamp/www/github/Depot/app/cache/prod');
+=======
+        return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/wamp/www/emeraude/app/cache/prod');
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     protected function getTranslator_SelectorService()
     {
@@ -639,7 +871,11 @@ class appProdProjectContainer extends Container
     }
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
+<<<<<<< HEAD
         return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+=======
+        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
     public function getParameter($name)
     {
@@ -667,12 +903,21 @@ class appProdProjectContainer extends Container
     protected function getDefaultParameters()
     {
         return array(
+<<<<<<< HEAD
             'kernel.root_dir' => 'C:/wamp/www/github/Depot/app',
             'kernel.environment' => 'prod',
             'kernel.debug' => false,
             'kernel.name' => 'app',
             'kernel.cache_dir' => 'C:/wamp/www/github/Depot/app/cache/prod',
             'kernel.logs_dir' => 'C:/wamp/www/github/Depot/app/logs',
+=======
+            'kernel.root_dir' => 'C:/wamp/www/emeraude/app',
+            'kernel.environment' => 'prod',
+            'kernel.debug' => false,
+            'kernel.name' => 'app',
+            'kernel.cache_dir' => 'C:/wamp/www/emeraude/app/cache/prod',
+            'kernel.logs_dir' => 'C:/wamp/www/emeraude/app/logs',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'kernel.bundles' => array(
                 'FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle',
                 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle',
@@ -685,6 +930,8 @@ class appProdProjectContainer extends Container
                 'JMSSecurityExtraBundle' => 'JMS\\SecurityExtraBundle\\JMSSecurityExtraBundle',
                 'BetaBundle' => 'Alpha\\BetaBundle\\BetaBundle',
                 'FOSFacebookBundle' => 'FOS\\FacebookBundle\\FOSFacebookBundle',
+                'JMSSerializerBundle' => 'JMS\\SerializerBundle\\JMSSerializerBundle',
+                'FOSRestBundle' => 'FOS\\RestBundle\\FOSRestBundle',
             ),
             'kernel.charset' => 'UTF-8',
             'kernel.container_class' => 'appProdProjectContainer',
@@ -743,7 +990,11 @@ class appProdProjectContainer extends Container
             'validator.mapping.loader.yaml_files_loader.class' => 'Symfony\\Component\\Validator\\Mapping\\Loader\\YamlFilesLoader',
             'validator.validator_factory.class' => 'Symfony\\Bundle\\FrameworkBundle\\Validator\\ConstraintValidatorFactory',
             'validator.mapping.loader.xml_files_loader.mapping_files' => array(
+<<<<<<< HEAD
                 0 => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
+=======
+                0 => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
             ),
@@ -762,7 +1013,11 @@ class appProdProjectContainer extends Container
             'router.cache_warmer.class' => 'Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer',
             'router.options.matcher.cache_class' => 'appprodUrlMatcher',
             'router.options.generator.cache_class' => 'appprodUrlGenerator',
+<<<<<<< HEAD
             'router.resource' => 'C:/wamp/www/github/Depot/app/config/routing.yml',
+=======
+            'router.resource' => 'C:/wamp/www/emeraude/app/config/routing.yml',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'request_listener.http_port' => 80,
             'request_listener.https_port' => 443,
             'templating.engine.delegating.class' => 'Symfony\\Bundle\\FrameworkBundle\\Templating\\DelegatingEngine',
@@ -885,7 +1140,11 @@ class appProdProjectContainer extends Container
                 'debug' => false,
                 'strict_variables' => false,
                 'exception_controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction',
+<<<<<<< HEAD
                 'cache' => 'C:/wamp/www/github/Depot/app/cache/prod/twig',
+=======
+                'cache' => 'C:/wamp/www/emeraude/app/cache/prod/twig',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
                 'charset' => 'UTF-8',
             ),
             'monolog.logger.class' => 'Symfony\\Bridge\\Monolog\\Logger',
@@ -962,7 +1221,11 @@ class appProdProjectContainer extends Container
             'doctrine.orm.validator.unique.class' => 'Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator',
             'doctrine.orm.validator_initializer.class' => 'Symfony\\Bridge\\Doctrine\\Validator\\EntityInitializer',
             'doctrine.orm.auto_generate_proxy_classes' => false,
+<<<<<<< HEAD
             'doctrine.orm.proxy_dir' => 'C:/wamp/www/github/Depot/app/cache/prod/doctrine/orm/Proxies',
+=======
+            'doctrine.orm.proxy_dir' => 'C:/wamp/www/emeraude/app/cache/prod/doctrine/orm/Proxies',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'doctrine.orm.proxy_namespace' => 'Proxies',
             'assetic.asset_factory.class' => 'Symfony\\Bundle\\AsseticBundle\\Factory\\AssetFactory',
             'assetic.asset_manager.class' => 'Assetic\\Factory\\LazyAssetManager',
@@ -977,7 +1240,11 @@ class appProdProjectContainer extends Container
             'assetic.worker.ensure_filter.class' => 'Assetic\\Factory\\Worker\\EnsureFilterWorker',
             'assetic.node.paths' => array(
             ),
+<<<<<<< HEAD
             'assetic.cache_dir' => 'C:/wamp/www/github/Depot/app/cache/prod/assetic',
+=======
+            'assetic.cache_dir' => 'C:/wamp/www/emeraude/app/cache/prod/assetic',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'assetic.twig_extension.class' => 'Symfony\\Bundle\\AsseticBundle\\Twig\\AsseticExtension',
             'assetic.twig_formula_loader.class' => 'Assetic\\Extension\\Twig\\TwigFormulaLoader',
             'assetic.helper.dynamic.class' => 'Symfony\\Bundle\\AsseticBundle\\Templating\\DynamicAsseticHelper',
@@ -986,8 +1253,13 @@ class appProdProjectContainer extends Container
             'assetic.debug' => false,
             'assetic.use_controller' => false,
             'assetic.enable_profiler' => false,
+<<<<<<< HEAD
             'assetic.read_from' => 'C:/wamp/www/github/Depot/app/../web',
             'assetic.write_to' => 'C:/wamp/www/github/Depot/app/../web',
+=======
+            'assetic.read_from' => 'C:/wamp/www/emeraude/app/../web',
+            'assetic.write_to' => 'C:/wamp/www/emeraude/app/../web',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.sass.bin' => '/usr/bin/sass',
@@ -1003,7 +1275,6 @@ class appProdProjectContainer extends Container
             'sensio_framework_extra.converter.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\ParamConverterListener',
             'sensio_framework_extra.converter.manager.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\ParamConverterManager',
             'sensio_framework_extra.converter.doctrine.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\DoctrineParamConverter',
-            'sensio_framework_extra.view.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\TemplateListener',
             'security.secured_services' => array(
             ),
             'security.access.method_interceptor.class' => 'JMS\\SecurityExtraBundle\\Security\\Authorization\\Interception\\MethodSecurityInterceptor',
@@ -1019,7 +1290,11 @@ class appProdProjectContainer extends Container
             'fos_facebook.api.class' => 'FOS\\FacebookBundle\\Facebook\\FacebookSessionPersistence',
             'fos_facebook.helper.class' => 'FOS\\FacebookBundle\\Templating\\Helper\\FacebookHelper',
             'fos_facebook.twig.class' => 'FOS\\FacebookBundle\\Twig\\Extension\\FacebookExtension',
+<<<<<<< HEAD
             'fos_facebook.file' => 'C:/wamp/www/github/Depot/app/../vendor/facebook/src/base_facebook.php',
+=======
+            'fos_facebook.file' => 'C:/wamp/www/emeraude/app/../vendor/facebook/src/base_facebook.php',
+>>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'fos_facebook.app_id' => '133620996704145',
             'fos_facebook.secret' => 'cc69538949136be77f3302e26f6a6f2b',
             'fos_facebook.cookie' => true,
@@ -1030,6 +1305,70 @@ class appProdProjectContainer extends Container
                 0 => 'email',
                 1 => 'user_birthday',
                 2 => 'user_location',
+            ),
+            'jms_serializer.metadata.file_locator.class' => 'Metadata\\Driver\\FileLocator',
+            'jms_serializer.metadata.annotation_driver.class' => 'JMS\\SerializerBundle\\Metadata\\Driver\\AnnotationDriver',
+            'jms_serializer.metadata.chain_driver.class' => 'Metadata\\Driver\\DriverChain',
+            'jms_serializer.metadata.yaml_driver.class' => 'JMS\\SerializerBundle\\Metadata\\Driver\\YamlDriver',
+            'jms_serializer.metadata.xml_driver.class' => 'JMS\\SerializerBundle\\Metadata\\Driver\\XmlDriver',
+            'jms_serializer.metadata.php_driver.class' => 'JMS\\SerializerBundle\\Metadata\\Driver\\PhpDriver',
+            'jms_serializer.metadata.lazy_loading_driver.class' => 'Metadata\\Driver\\LazyLoadingDriver',
+            'jms_serializer.metadata.metadata_factory.class' => 'Metadata\\MetadataFactory',
+            'jms_serializer.metadata.cache.file_cache.class' => 'Metadata\\Cache\\FileCache',
+            'jms_serializer.camel_case_naming_strategy.class' => 'JMS\\SerializerBundle\\Serializer\\Naming\\CamelCaseNamingStrategy',
+            'jms_serializer.serialized_name_annotation_strategy.class' => 'JMS\\SerializerBundle\\Serializer\\Naming\\SerializedNameAnnotationStrategy',
+            'jms_serializer.cache_naming_strategy.class' => 'JMS\\SerializerBundle\\Serializer\\Naming\\CacheNamingStrategy',
+            'jms_serializer.unserialize_object_constructor.class' => 'JMS\\SerializerBundle\\Serializer\\Construction\\UnserializeObjectConstructor',
+            'jms_serializer.version_exclusion_strategy.class' => 'JMS\\SerializerBundle\\Serializer\\Exclusion\\VersionExclusionStrategy',
+            'jms_serializer.serializer.class' => 'JMS\\SerializerBundle\\Serializer\\LazyLoadingSerializer',
+            'jms_serializer.twig_extension.class' => 'JMS\\SerializerBundle\\Twig\\SerializerExtension',
+            'jms_serializer.json_serialization_visitor.class' => 'JMS\\SerializerBundle\\Serializer\\JsonSerializationVisitor',
+            'jms_serializer.json_deserialization_visitor.class' => 'JMS\\SerializerBundle\\Serializer\\JsonDeserializationVisitor',
+            'jms_serializer.xml_serialization_visitor.class' => 'JMS\\SerializerBundle\\Serializer\\XmlSerializationVisitor',
+            'jms_serializer.xml_deserialization_visitor.class' => 'JMS\\SerializerBundle\\Serializer\\XmlDeserializationVisitor',
+            'jms_serializer.yaml_serialization_visitor.class' => 'JMS\\SerializerBundle\\Serializer\\YamlSerializationVisitor',
+            'jms_serializer.object_based_custom_handler.class' => 'JMS\\SerializerBundle\\Serializer\\Handler\\ObjectBasedCustomHandler',
+            'jms_serializer.datetime_handler.class' => 'JMS\\SerializerBundle\\Serializer\\Handler\\DateTimeHandler',
+            'jms_serializer.array_collection_handler.class' => 'JMS\\SerializerBundle\\Serializer\\Handler\\ArrayCollectionHandler',
+            'jms_serializer.form_error_handler.class' => 'JMS\\SerializerBundle\\Serializer\\Handler\\FormErrorHandler',
+            'jms_serializer.constraint_violation_handler.class' => 'JMS\\SerializerBundle\\Serializer\\Handler\\ConstraintViolationHandler',
+            'jms_serializer.doctrine_handler.class' => 'JMS\\SerializerBundle\\Serializer\\Handler\\DoctrineProxyHandler',
+            'fos_rest.serializer.exclusion_strategy.type' => '',
+            'fos_rest.serializer.exclusion_strategy.value' => '',
+            'fos_rest.routing.loader_2_0.controller.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestRouteLoader20',
+            'fos_rest.routing.loader.controller.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestRouteLoader20',
+            'fos_rest.routing.loader.yaml_collection.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestYamlCollectionLoader',
+            'fos_rest.routing.loader.xml_collection.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestXmlCollectionLoader',
+            'fos_rest.routing.loader.processor.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestRouteProcessor',
+            'fos_rest.routing.loader.reader.controller.class' => 'FOS\\RestBundle\\Routing\\Loader\\Reader\\RestControllerReader',
+            'fos_rest.routing.loader.reader.action.class' => 'FOS\\RestBundle\\Routing\\Loader\\Reader\\RestActionReader',
+            'fos_rest.format_negotiator.class' => 'FOS\\Rest\\Util\\FormatNegotiator',
+            'fos_rest.request.param_fetcher.class' => 'FOS\\RestBundle\\Request\\ParamFetcher',
+            'fos_rest.request.param_fetcher.reader.class' => 'FOS\\RestBundle\\Request\\ParamReader',
+            'fos_rest.formats' => array(
+                'json' => false,
+                'html' => true,
+            ),
+            'fos_rest.default_engine' => 'php',
+            'fos_rest.force_redirects' => array(
+                'html' => 302,
+            ),
+            'fos_rest.failed_validation' => 400,
+            'fos_rest.routing.loader.default_format' => NULL,
+            'fos_rest.exception.codes' => array(
+            ),
+            'fos_rest.exception.messages' => array(
+            ),
+            'fos_rest.decoders' => array(
+                'json' => 'fos_rest.decoder.json',
+            ),
+            'fos_rest.default_priorities' => array(
+                0 => 'html',
+                1 => '*/*',
+            ),
+            'fos_rest.prefer_extension' => true,
+            'fos_rest.fallback_format' => 'html',
+            'fos_rest.mime_types' => array(
             ),
         );
     }

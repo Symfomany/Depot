@@ -1,6 +1,12 @@
 BetaBundle:
     resource: "@BetaBundle/Resources/config/routing.yml"
     prefix:   /
+    
+test:
+    resource: Alpha\BetaBundle\Controller\DefaultController
+    prefix: /api
+    type: rest
+
 
 #Facebook Routing
 #_facebook_secured:

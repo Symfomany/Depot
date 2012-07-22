@@ -2,12 +2,14 @@
 
 namespace Alpha\BetaBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 use Imagine\Gd\Imagine;
+use Alpha\BetaBundle\Entity\Test;
+use Alpha\BetaBundle\Entity\Villes;
+use Doctrine\Common\Util\Debug as Debug;
 
+class DefaultController extends Controller {
 
-class DefaultController extends Controller
-{
     
     public function indexAction()
     {
@@ -15,6 +17,7 @@ class DefaultController extends Controller
          $imagine->open('./uploads/Desert.jpg')
                  ->resize(new \Imagine\Image\Box(500,250))
                  ->save('./uploads/ok.jpg');
-        return $this->render('BetaBundle:Default:index.html.twig');
+//    +Tri par geoloc distance GEO()
     }
+    
 }

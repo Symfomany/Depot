@@ -1,0 +1,46 @@
+<?php
+
+namespace Alpha\BetaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Alpha\BetaBundle\Entity\Test
+ *
+ * @ORM\Table(name="test")
+ * @ORM\Entity
+ */
+class Test
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $nom
+     *
+     * @ORM\Column(name="nom", type="string", length=80, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string $prenom
+     *
+     * @ORM\Column(name="prenom", type="string", length=80, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var string $email
+     *
+     * @ORM\Column(name="email", type="string", length=80, nullable=false)
+     */
+    private $email;
+
+
+}

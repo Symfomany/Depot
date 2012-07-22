@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Departement" table="departement">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="idDepartement" type="integer" column="id_departement">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idRegion" type="integer" column="id_region"/>
+    <field name="code" type="string" column="code" length="3"/>
+    <field name="nomDepartement" type="string" column="nom_departement" length="250"/>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

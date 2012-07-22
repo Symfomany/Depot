@@ -4,6 +4,10 @@ imports:
 framework:
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
+    
+sensio_framework_extra:
+    view:
+        annotations: false
 
 web_profiler:
     toolbar: true

@@ -1,0 +1,55 @@
+<h1>Villes list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Habitants</th>
+            <th>Densite</th>
+            <th>Departement</th>
+            <th>Nomville</th>
+            <th>Nomvillemaj</th>
+            <th>Nomvilleurl</th>
+            <th>Codepostal</th>
+            <th>Codeinsee</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Coordfixed</th>
+            <th>Cparr</th>
+            <th>Arrondissement</th>
+            <th>Latrad</th>
+            <th>Lonrad</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('villes_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.habitants }}</td>
+            <td>{{ entity.densite }}</td>
+            <td>{{ entity.departement }}</td>
+            <td>{{ entity.nomVille }}</td>
+            <td>{{ entity.nomVilleMaj }}</td>
+            <td>{{ entity.nomVilleUrl }}</td>
+            <td>{{ entity.codePostal }}</td>
+            <td>{{ entity.codeInsee }}</td>
+            <td>{{ entity.latitude }}</td>
+            <td>{{ entity.longitude }}</td>
+            <td>{{ entity.coordFixed }}</td>
+            <td>{{ entity.cpArr }}</td>
+            <td>{{ entity.arrondissement }}</td>
+            <td>{{ entity.latrad }}</td>
+            <td>{{ entity.lonrad }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('villes_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+

@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Alpha\BetaBundle\BetaBundle(),
             new FOS\FacebookBundle\FOSFacebookBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new FOS\RestBundle\FOSRestBundle()
 //            new Genemu\Bundle\FormBundle\GenemuFormBundle()
         );
 

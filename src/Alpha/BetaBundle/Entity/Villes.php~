@@ -1,0 +1,130 @@
+<?php
+
+namespace Alpha\BetaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Alpha\BetaBundle\Entity\Villes
+ *
+ * @ORM\Table(name="villes")
+ * @ORM\Entity
+ */
+class Villes
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer $habitants
+     *
+     * @ORM\Column(name="habitants", type="integer", nullable=false)
+     */
+    private $habitants;
+
+    /**
+     * @var integer $densite
+     *
+     * @ORM\Column(name="densite", type="integer", nullable=false)
+     */
+    private $densite;
+
+    /**
+     * @var string $departement
+     *
+     * @ORM\Column(name="departement", type="string", length=2, nullable=false)
+     */
+    private $departement;
+
+    /**
+     * @var string $nomVille
+     *
+     * @ORM\Column(name="nom_ville", type="string", length=255, nullable=false)
+     */
+    private $nomVille;
+
+    /**
+     * @var string $nomVilleMaj
+     *
+     * @ORM\Column(name="nom_ville_maj", type="string", length=255, nullable=false)
+     */
+    private $nomVilleMaj;
+
+    /**
+     * @var string $nomVilleUrl
+     *
+     * @ORM\Column(name="nom_ville_url", type="string", length=255, nullable=false)
+     */
+    private $nomVilleUrl;
+
+    /**
+     * @var string $codePostal
+     *
+     * @ORM\Column(name="code_postal", type="string", length=5, nullable=false)
+     */
+    private $codePostal;
+
+    /**
+     * @var integer $codeInsee
+     *
+     * @ORM\Column(name="code_insee", type="integer", nullable=false)
+     */
+    private $codeInsee;
+
+    /**
+     * @var float $latitude
+     *
+     * @ORM\Column(name="latitude", type="float", nullable=false)
+     */
+    private $latitude;
+
+    /**
+     * @var float $longitude
+     *
+     * @ORM\Column(name="longitude", type="float", nullable=false)
+     */
+    private $longitude;
+
+    /**
+     * @var boolean $coordFixed
+     *
+     * @ORM\Column(name="coord_fixed", type="boolean", nullable=false)
+     */
+    private $coordFixed;
+
+    /**
+     * @var string $cpArr
+     *
+     * @ORM\Column(name="cp_arr", type="string", length=5, nullable=false)
+     */
+    private $cpArr;
+
+    /**
+     * @var boolean $arrondissement
+     *
+     * @ORM\Column(name="arrondissement", type="boolean", nullable=false)
+     */
+    private $arrondissement;
+
+    /**
+     * @var float $latrad
+     *
+     * @ORM\Column(name="latRad", type="float", nullable=false)
+     */
+    private $latrad;
+
+    /**
+     * @var float $lonrad
+     *
+     * @ORM\Column(name="lonRad", type="float", nullable=false)
+     */
+    private $lonrad;
+
+
+}

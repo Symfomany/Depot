@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Villes" table="villes">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="habitants" type="integer" column="habitants"/>
+    <field name="densite" type="integer" column="densite"/>
+    <field name="departement" type="string" column="departement" length="2"/>
+    <field name="nomVille" type="string" column="nom_ville" length="255"/>
+    <field name="nomVilleMaj" type="string" column="nom_ville_maj" length="255"/>
+    <field name="nomVilleUrl" type="string" column="nom_ville_url" length="255"/>
+    <field name="codePostal" type="string" column="code_postal" length="5"/>
+    <field name="codeInsee" type="integer" column="code_insee"/>
+    <field name="latitude" type="float" column="latitude"/>
+    <field name="longitude" type="float" column="longitude"/>
+    <field name="coordFixed" type="boolean" column="coord_fixed"/>
+    <field name="cpArr" type="string" column="cp_arr" length="5"/>
+    <field name="arrondissement" type="boolean" column="arrondissement"/>
+    <field name="latrad" type="float" column="latRad"/>
+    <field name="lonrad" type="float" column="lonRad"/>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>
