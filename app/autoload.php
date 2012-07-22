@@ -16,6 +16,7 @@ $loader->registerNamespaces(array(
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
     'Facebook'         => __DIR__.'/../vendor/facebook/src',
     'FOS'              => __DIR__.'/../vendor/bundles',
+    'Imagine'          => __DIR__.'/../vendor/imagine/lib'
 //    'Genemu'           => __DIR__.'/../vendor/bundles'
 ));
 $loader->registerPrefixes(array(

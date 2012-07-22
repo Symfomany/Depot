@@ -12,6 +12,7 @@ _security_check:
 _security_logout:
     pattern:  /logout
 
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
