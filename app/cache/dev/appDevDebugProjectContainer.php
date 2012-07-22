@@ -55,11 +55,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAnnotationReaderService()
     {
-<<<<<<< HEAD
         return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/wamp/www/github/Depot/app/cache/dev/annotations', true);
-=======
-        return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/wamp/www/emeraude/app/cache/dev/annotations', true);
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -74,7 +70,6 @@ class appDevDebugProjectContainer extends Container
     {
         $a = $this->get('templating.loader');
 
-<<<<<<< HEAD
         $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/wamp/www/github/Depot/app/cache/dev/assetic/config'), true)));
 
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:/wamp/www/github/Depot/app/Resources/FrameworkBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
@@ -88,33 +83,13 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSecurityExtraBundle', 'C:/wamp/www/github/Depot/app/Resources/JMSSecurityExtraBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSecurityExtraBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\JMS\\SecurityExtraBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:/wamp/www/github/Depot/app/Resources/BetaBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:\\wamp\\www\\github\\Depot\\src\\Alpha\\BetaBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:/wamp/www/github/Depot/app/Resources/FOSFacebookBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\FOS\\FacebookBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSerializerBundle', 'C:/wamp/www/github/Depot/app/Resources/JMSSerializerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSerializerBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\JMS\\SerializerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSRestBundle', 'C:/wamp/www/github/Depot/app/Resources/FOSRestBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSRestBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\FOS\\RestBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AcmeDemoBundle', 'C:/wamp/www/github/Depot/app/Resources/AcmeDemoBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AcmeDemoBundle', 'C:\\wamp\\www\\github\\Depot\\src\\Acme\\DemoBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', 'C:/wamp/www/github/Depot/app/Resources/WebProfilerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', 'C:/wamp/www/github/Depot/app/Resources/SensioDistributionBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\Sensio\\Bundle\\DistributionBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioGeneratorBundle', 'C:/wamp/www/github/Depot/app/Resources/SensioGeneratorBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioGeneratorBundle', 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\Sensio\\Bundle\\GeneratorBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', 'C:/wamp/www/github/Depot/app/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'), 'twig');
-=======
-        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/wamp/www/emeraude/app/cache/dev/assetic/config'), true)));
-
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:/wamp/www/emeraude/app/Resources/FrameworkBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FrameworkBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SecurityBundle', 'C:/wamp/www/emeraude/app/Resources/SecurityBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SecurityBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'TwigBundle', 'C:/wamp/www/emeraude/app/Resources/TwigBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'TwigBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'MonologBundle', 'C:/wamp/www/emeraude/app/Resources/MonologBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'MonologBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\MonologBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SwiftmailerBundle', 'C:/wamp/www/emeraude/app/Resources/SwiftmailerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SwiftmailerBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'DoctrineBundle', 'C:/wamp/www/emeraude/app/Resources/DoctrineBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'DoctrineBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\DoctrineBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AsseticBundle', 'C:/wamp/www/emeraude/app/Resources/AsseticBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AsseticBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Symfony\\Bundle\\AsseticBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioFrameworkExtraBundle', 'C:/wamp/www/emeraude/app/Resources/SensioFrameworkExtraBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioFrameworkExtraBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\FrameworkExtraBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSecurityExtraBundle', 'C:/wamp/www/emeraude/app/Resources/JMSSecurityExtraBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSecurityExtraBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SecurityExtraBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:/wamp/www/emeraude/app/Resources/BetaBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BetaBundle', 'C:\\wamp\\www\\emeraude\\src\\Alpha\\BetaBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:/wamp/www/emeraude/app/Resources/FOSFacebookBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSFacebookBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\FacebookBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSerializerBundle', 'C:/wamp/www/emeraude/app/Resources/JMSSerializerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'JMSSerializerBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SerializerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSRestBundle', 'C:/wamp/www/emeraude/app/Resources/FOSRestBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSRestBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\RestBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AcmeDemoBundle', 'C:/wamp/www/emeraude/app/Resources/AcmeDemoBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AcmeDemoBundle', 'C:\\wamp\\www\\emeraude\\src\\Acme\\DemoBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', 'C:/wamp/www/emeraude/app/Resources/WebProfilerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', 'C:/wamp/www/emeraude/app/Resources/SensioDistributionBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\DistributionBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioGeneratorBundle', 'C:/wamp/www/emeraude/app/Resources/SensioGeneratorBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioGeneratorBundle', 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\GeneratorBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
-        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, '', 'C:/wamp/www/emeraude/app/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'), 'twig');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         return $instance;
     }
@@ -181,11 +156,7 @@ class appDevDebugProjectContainer extends Container
         $a = $this->get('kernel');
         $b = $this->get('templating.name_parser');
 
-<<<<<<< HEAD
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/wamp/www/github/Depot/app/Resources');
-=======
-        $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/wamp/www/emeraude/app/Resources');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer($this), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 3 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c), 4 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine'))));
     }
@@ -259,7 +230,6 @@ class appDevDebugProjectContainer extends Container
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
         $a = new \Doctrine\Common\Cache\ArrayCache();
-<<<<<<< HEAD
         $a->setNamespace('sf2orm_default_7eefa66256b5f2b8970a2ead315922d5');
 
         $b = new \Doctrine\Common\Cache\ArrayCache();
@@ -268,28 +238,8 @@ class appDevDebugProjectContainer extends Container
         $c = new \Doctrine\Common\Cache\ArrayCache();
         $c->setNamespace('sf2orm_default_7eefa66256b5f2b8970a2ead315922d5');
 
-        $d = new \Doctrine\ORM\Configuration();
-        $d->setEntityNamespaces(array());
-        $d->setMetadataCacheImpl($a);
-        $d->setQueryCacheImpl($b);
-        $d->setResultCacheImpl($c);
-        $d->setMetadataDriverImpl(new \Doctrine\ORM\Mapping\Driver\DriverChain());
-        $d->setProxyDir('C:/wamp/www/github/Depot/app/cache/dev/doctrine/orm/Proxies');
-        $d->setProxyNamespace('Proxies');
-        $d->setAutoGenerateProxyClasses(true);
-        $d->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
-=======
-        $a->setNamespace('sf2orm_default_3219eb99c20fc08ed1a1fe2e83fe3bbc');
-
-        $b = new \Doctrine\Common\Cache\ArrayCache();
-        $b->setNamespace('sf2orm_default_3219eb99c20fc08ed1a1fe2e83fe3bbc');
-
-        $c = new \Doctrine\Common\Cache\ArrayCache();
-        $c->setNamespace('sf2orm_default_3219eb99c20fc08ed1a1fe2e83fe3bbc');
-
         $d = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(new \Symfony\Bridge\Doctrine\Annotations\IndexedReader($this->get('annotation_reader')), array(0 => 'C:\\wamp\\www\\emeraude\\src\\Alpha\\BetaBundle\\Entity')), 'Alpha\\BetaBundle\\Entity');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
+        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(new \Symfony\Bridge\Doctrine\Annotations\IndexedReader($this->get('annotation_reader')), array(0 => 'C:\\wamp\\www\\github\\Depot\\src\\Alpha\\BetaBundle\\Entity')), 'Alpha\\BetaBundle\\Entity');
 
         $e = new \Doctrine\ORM\Configuration();
         $e->setEntityNamespaces(array('BetaBundle' => 'Alpha\\BetaBundle\\Entity'));
@@ -297,7 +247,7 @@ class appDevDebugProjectContainer extends Container
         $e->setQueryCacheImpl($b);
         $e->setResultCacheImpl($c);
         $e->setMetadataDriverImpl($d);
-        $e->setProxyDir('C:/wamp/www/emeraude/app/cache/dev/doctrine/orm/Proxies');
+        $e->setProxyDir('C:/wamp/www/github/Depot/app/cache/dev/doctrine/orm/Proxies');
         $e->setProxyNamespace('Proxies');
         $e->setAutoGenerateProxyClasses(true);
         $e->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
@@ -378,11 +328,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getFileLocatorService()
     {
-<<<<<<< HEAD
         return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/wamp/www/github/Depot/app/Resources');
-=======
-        return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/wamp/www/emeraude/app/Resources');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -863,11 +809,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getFosFacebook_ApiService()
     {
-<<<<<<< HEAD
         require_once 'C:/wamp/www/github/Depot/app/../vendor/facebook/src/base_facebook.php';
-=======
-        require_once 'C:/wamp/www/emeraude/app/../vendor/facebook/src/base_facebook.php';
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         return $this->services['fos_facebook.api'] = new \FOS\FacebookBundle\Facebook\FacebookSessionPersistence(array('appId' => '133620996704145', 'secret' => 'cc69538949136be77f3302e26f6a6f2b', 'cookie' => true, 'domain' => NULL), $this->get('session'));
     }
@@ -1167,7 +1109,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getJmsSerializer_MetadataDriverService()
     {
-        $a = new \Metadata\Driver\FileLocator(array('Symfony\\Bundle\\FrameworkBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/config/serializer', 'Symfony\\Bundle\\SecurityBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/config/serializer', 'Symfony\\Bundle\\TwigBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/config/serializer', 'Symfony\\Bundle\\MonologBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\MonologBundle/Resources/config/serializer', 'Symfony\\Bundle\\SwiftmailerBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\SwiftmailerBundle/Resources/config/serializer', 'Symfony\\Bundle\\DoctrineBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\DoctrineBundle/Resources/config/serializer', 'Symfony\\Bundle\\AsseticBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Symfony\\Bundle\\AsseticBundle/Resources/config/serializer', 'Sensio\\Bundle\\FrameworkExtraBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\FrameworkExtraBundle/Resources/config/serializer', 'JMS\\SecurityExtraBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SecurityExtraBundle/Resources/config/serializer', 'Alpha\\BetaBundle' => 'C:\\wamp\\www\\emeraude\\src\\Alpha\\BetaBundle/Resources/config/serializer', 'FOS\\FacebookBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\FacebookBundle/Resources/config/serializer', 'JMS\\SerializerBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\JMS\\SerializerBundle/Resources/config/serializer', 'FOS\\RestBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\FOS\\RestBundle/Resources/config/serializer', 'Acme\\DemoBundle' => 'C:\\wamp\\www\\emeraude\\src\\Acme\\DemoBundle/Resources/config/serializer', 'Symfony\\Bundle\\WebProfilerBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/config/serializer', 'Sensio\\Bundle\\DistributionBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\DistributionBundle/Resources/config/serializer', 'Sensio\\Bundle\\GeneratorBundle' => 'C:\\wamp\\www\\emeraude\\vendor\\bundles\\Sensio\\Bundle\\GeneratorBundle/Resources/config/serializer'));
+        $a = new \Metadata\Driver\FileLocator(array('Symfony\\Bundle\\FrameworkBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/config/serializer', 'Symfony\\Bundle\\SecurityBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/config/serializer', 'Symfony\\Bundle\\TwigBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/config/serializer', 'Symfony\\Bundle\\MonologBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\MonologBundle/Resources/config/serializer', 'Symfony\\Bundle\\SwiftmailerBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\SwiftmailerBundle/Resources/config/serializer', 'Symfony\\Bundle\\DoctrineBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\DoctrineBundle/Resources/config/serializer', 'Symfony\\Bundle\\AsseticBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\Symfony\\Bundle\\AsseticBundle/Resources/config/serializer', 'Sensio\\Bundle\\FrameworkExtraBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\Sensio\\Bundle\\FrameworkExtraBundle/Resources/config/serializer', 'JMS\\SecurityExtraBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\JMS\\SecurityExtraBundle/Resources/config/serializer', 'Alpha\\BetaBundle' => 'C:\\wamp\\www\\github\\Depot\\src\\Alpha\\BetaBundle/Resources/config/serializer', 'FOS\\FacebookBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\FOS\\FacebookBundle/Resources/config/serializer', 'JMS\\SerializerBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\JMS\\SerializerBundle/Resources/config/serializer', 'FOS\\RestBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\FOS\\RestBundle/Resources/config/serializer', 'Acme\\DemoBundle' => 'C:\\wamp\\www\\github\\Depot\\src\\Acme\\DemoBundle/Resources/config/serializer', 'Symfony\\Bundle\\WebProfilerBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/config/serializer', 'Sensio\\Bundle\\DistributionBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\Sensio\\Bundle\\DistributionBundle/Resources/config/serializer', 'Sensio\\Bundle\\GeneratorBundle' => 'C:\\wamp\\www\\github\\Depot\\vendor\\bundles\\Sensio\\Bundle\\GeneratorBundle/Resources/config/serializer'));
 
         return $this->services['jms_serializer.metadata_driver'] = new \Metadata\Driver\DriverChain(array(0 => new \JMS\SerializerBundle\Metadata\Driver\YamlDriver($a), 1 => new \JMS\SerializerBundle\Metadata\Driver\XmlDriver($a), 2 => new \JMS\SerializerBundle\Metadata\Driver\PhpDriver($a), 3 => new \JMS\SerializerBundle\Metadata\Driver\AnnotationDriver($this->get('annotation_reader'))));
     }
@@ -1305,11 +1247,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getMonolog_Handler_MainService()
     {
-<<<<<<< HEAD
         return $this->services['monolog.handler.main'] = new \Monolog\Handler\StreamHandler('C:/wamp/www/github/Depot/app/logs/dev.log', 100, true);
-=======
-        return $this->services['monolog.handler.main'] = new \Monolog\Handler\StreamHandler('C:/wamp/www/emeraude/app/logs/dev.log', 100, true);
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -1461,11 +1399,7 @@ class appDevDebugProjectContainer extends Container
         $c = new \Symfony\Component\HttpKernel\DataCollector\EventDataCollector();
         $c->setEventDispatcher($this->get('event_dispatcher'));
 
-<<<<<<< HEAD
         $this->services['profiler'] = $instance = new \Symfony\Component\HttpKernel\Profiler\Profiler(new \Symfony\Component\HttpKernel\Profiler\SqliteProfilerStorage('sqlite:C:/wamp/www/github/Depot/app/cache/dev/profiler.db', '', '', 86400), $a);
-=======
-        $this->services['profiler'] = $instance = new \Symfony\Component\HttpKernel\Profiler\Profiler(new \Symfony\Component\HttpKernel\Profiler\SqliteProfilerStorage('sqlite:C:/wamp/www/emeraude/app/cache/dev/profiler.db', '', '', 86400), $a);
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         $instance->add(new \Symfony\Component\HttpKernel\DataCollector\ConfigDataCollector($b));
         $instance->add($this->get('data_collector.request'));
@@ -1534,11 +1468,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getRouterService()
     {
-<<<<<<< HEAD
         return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/wamp/www/github/Depot/app/config/routing_dev.yml', array('cache_dir' => 'C:/wamp/www/github/Depot/app/cache/dev', 'debug' => true, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appdevUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appdevUrlMatcher'));
-=======
-        return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/wamp/www/emeraude/app/config/routing_dev.yml', array('cache_dir' => 'C:/wamp/www/emeraude/app/cache/dev', 'debug' => true, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appdevUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appdevUrlMatcher'));
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -1730,11 +1660,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSensio_Distribution_WebconfiguratorService()
     {
-<<<<<<< HEAD
         return $this->services['sensio.distribution.webconfigurator'] = new \Sensio\Bundle\DistributionBundle\Configurator\Configurator('C:/wamp/www/github/Depot/app');
-=======
-        return $this->services['sensio.distribution.webconfigurator'] = new \Sensio\Bundle\DistributionBundle\Configurator\Configurator('C:/wamp/www/emeraude/app');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -1817,7 +1743,7 @@ class appDevDebugProjectContainer extends Container
     protected function getSerializerService()
     {
         $a = new \Metadata\MetadataFactory($this->get('jms_serializer.metadata.lazy_loading_driver'), 'Metadata\\ClassHierarchyMetadata', true);
-        $a->setCache(new \Metadata\Cache\FileCache('C:/wamp/www/emeraude/app/cache/dev/jms_serializer'));
+        $a->setCache(new \Metadata\Cache\FileCache('C:/wamp/www/github/Depot/app/cache/dev/jms_serializer'));
 
         $this->services['serializer'] = $instance = new \JMS\SerializerBundle\Serializer\LazyLoadingSerializer($a, array('json' => 'jms_serializer.json_serialization_visitor', 'xml' => 'jms_serializer.xml_serialization_visitor', 'yml' => 'jms_serializer.yaml_serialization_visitor'), array('json' => 'jms_serializer.json_deserialization_visitor', 'xml' => 'jms_serializer.xml_deserialization_visitor'));
 
@@ -1993,11 +1919,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_Helper_CodeService()
     {
-<<<<<<< HEAD
         return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/wamp/www/github/Depot/app', 'UTF-8');
-=======
-        return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/wamp/www/emeraude/app', 'UTF-8');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -2183,11 +2105,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTranslator_DefaultService()
     {
-<<<<<<< HEAD
         return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => 'php', 'translation.loader.yml' => 'yml', 'translation.loader.xliff' => 'xliff'), array('cache_dir' => 'C:/wamp/www/github/Depot/app/cache/dev/translations', 'debug' => true), $this->get('session'));
-=======
-        return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => 'php', 'translation.loader.yml' => 'yml', 'translation.loader.xliff' => 'xliff'), array('cache_dir' => 'C:/wamp/www/emeraude/app/cache/dev/translations', 'debug' => true), $this->get('session'));
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -2200,11 +2118,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTwigService()
     {
-<<<<<<< HEAD
         $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => true, 'strict_variables' => true, 'exception_controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction', 'cache' => 'C:/wamp/www/github/Depot/app/cache/dev/twig', 'charset' => 'UTF-8'));
-=======
-        $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => true, 'strict_variables' => true, 'exception_controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction', 'cache' => 'C:/wamp/www/emeraude/app/cache/dev/twig', 'charset' => 'UTF-8'));
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         $instance->addExtension(new \Symfony\Bundle\SecurityBundle\Twig\Extension\SecurityExtension($this->get('security.context')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator')));
@@ -2247,11 +2161,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['twig.loader'] = $instance = new \Symfony\Bundle\TwigBundle\Loader\FilesystemLoader($this->get('templating.locator'), $this->get('templating.name_parser'));
 
-<<<<<<< HEAD
         $instance->addPath('C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
-=======
-        $instance->addPath('C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         return $instance;
     }
@@ -2366,11 +2276,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_AssetFactoryService()
     {
-<<<<<<< HEAD
         $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, new \Symfony\Component\DependencyInjection\ParameterBag\ParameterBag($this->getDefaultParameters()), 'C:/wamp/www/github/Depot/app/../web', true);
-=======
-        $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, new \Symfony\Component\DependencyInjection\ParameterBag\ParameterBag($this->getDefaultParameters()), 'C:/wamp/www/emeraude/app/../web', true);
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
 
         $instance->addWorker(new \Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker());
 
@@ -2391,11 +2297,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_CacheService()
     {
-<<<<<<< HEAD
         return $this->services['assetic.cache'] = new \Assetic\Cache\FilesystemCache('C:/wamp/www/github/Depot/app/cache/dev/assetic/assets');
-=======
-        return $this->services['assetic.cache'] = new \Assetic\Cache\FilesystemCache('C:/wamp/www/emeraude/app/cache/dev/assetic/assets');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -2623,11 +2525,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_LocatorService()
     {
-<<<<<<< HEAD
         return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/wamp/www/github/Depot/app/cache/dev');
-=======
-        return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/wamp/www/emeraude/app/cache/dev');
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -2678,11 +2576,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
-<<<<<<< HEAD
         return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
-=======
-        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
     }
 
     /**
@@ -2734,21 +2628,12 @@ class appDevDebugProjectContainer extends Container
     protected function getDefaultParameters()
     {
         return array(
-<<<<<<< HEAD
             'kernel.root_dir' => 'C:/wamp/www/github/Depot/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
             'kernel.name' => 'app',
             'kernel.cache_dir' => 'C:/wamp/www/github/Depot/app/cache/dev',
             'kernel.logs_dir' => 'C:/wamp/www/github/Depot/app/logs',
-=======
-            'kernel.root_dir' => 'C:/wamp/www/emeraude/app',
-            'kernel.environment' => 'dev',
-            'kernel.debug' => true,
-            'kernel.name' => 'app',
-            'kernel.cache_dir' => 'C:/wamp/www/emeraude/app/cache/dev',
-            'kernel.logs_dir' => 'C:/wamp/www/emeraude/app/logs',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'kernel.bundles' => array(
                 'FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle',
                 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle',
@@ -2800,11 +2685,7 @@ class appDevDebugProjectContainer extends Container
             'translation.loader.yml.class' => 'Symfony\\Component\\Translation\\Loader\\YamlFileLoader',
             'translation.loader.xliff.class' => 'Symfony\\Component\\Translation\\Loader\\XliffFileLoader',
             'debug.event_dispatcher.class' => 'Symfony\\Bundle\\FrameworkBundle\\Debug\\TraceableEventDispatcher',
-<<<<<<< HEAD
             'debug.container.dump' => 'C:/wamp/www/github/Depot/app/cache/dev/appDevDebugProjectContainer.xml',
-=======
-            'debug.container.dump' => 'C:/wamp/www/emeraude/app/cache/dev/appDevDebugProjectContainer.xml',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'kernel.secret' => 'de00e507da711779a55f9a13f7220f2f36a90bf7',
             'kernel.trust_proxy_headers' => false,
             'session.class' => 'Symfony\\Component\\HttpFoundation\\Session',
@@ -2832,11 +2713,7 @@ class appDevDebugProjectContainer extends Container
             'validator.mapping.loader.yaml_files_loader.class' => 'Symfony\\Component\\Validator\\Mapping\\Loader\\YamlFilesLoader',
             'validator.validator_factory.class' => 'Symfony\\Bundle\\FrameworkBundle\\Validator\\ConstraintValidatorFactory',
             'validator.mapping.loader.xml_files_loader.mapping_files' => array(
-<<<<<<< HEAD
                 0 => 'C:\\wamp\\www\\github\\Depot\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
-=======
-                0 => 'C:\\wamp\\www\\emeraude\\vendor\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
 
@@ -2852,11 +2729,7 @@ class appDevDebugProjectContainer extends Container
             'data_collector.memory.class' => 'Symfony\\Component\\HttpKernel\\DataCollector\\MemoryDataCollector',
             'profiler_listener.only_exceptions' => false,
             'profiler_listener.only_master_requests' => false,
-<<<<<<< HEAD
             'profiler.storage.dsn' => 'sqlite:C:/wamp/www/github/Depot/app/cache/dev/profiler.db',
-=======
-            'profiler.storage.dsn' => 'sqlite:C:/wamp/www/emeraude/app/cache/dev/profiler.db',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'profiler.storage.username' => '',
             'profiler.storage.password' => '',
             'profiler.storage.lifetime' => 86400,
@@ -2875,11 +2748,7 @@ class appDevDebugProjectContainer extends Container
             'router.cache_warmer.class' => 'Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer',
             'router.options.matcher.cache_class' => 'appdevUrlMatcher',
             'router.options.generator.cache_class' => 'appdevUrlGenerator',
-<<<<<<< HEAD
             'router.resource' => 'C:/wamp/www/github/Depot/app/config/routing_dev.yml',
-=======
-            'router.resource' => 'C:/wamp/www/emeraude/app/config/routing_dev.yml',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'request_listener.http_port' => 80,
             'request_listener.https_port' => 443,
             'templating.engine.delegating.class' => 'Symfony\\Bundle\\FrameworkBundle\\Templating\\DelegatingEngine',
@@ -3003,11 +2872,7 @@ class appDevDebugProjectContainer extends Container
                 'debug' => true,
                 'strict_variables' => true,
                 'exception_controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction',
-<<<<<<< HEAD
                 'cache' => 'C:/wamp/www/github/Depot/app/cache/dev/twig',
-=======
-                'cache' => 'C:/wamp/www/emeraude/app/cache/dev/twig',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
                 'charset' => 'UTF-8',
             ),
             'monolog.logger.class' => 'Symfony\\Bridge\\Monolog\\Logger',
@@ -3085,11 +2950,7 @@ class appDevDebugProjectContainer extends Container
             'doctrine.orm.validator.unique.class' => 'Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator',
             'doctrine.orm.validator_initializer.class' => 'Symfony\\Bridge\\Doctrine\\Validator\\EntityInitializer',
             'doctrine.orm.auto_generate_proxy_classes' => true,
-<<<<<<< HEAD
             'doctrine.orm.proxy_dir' => 'C:/wamp/www/github/Depot/app/cache/dev/doctrine/orm/Proxies',
-=======
-            'doctrine.orm.proxy_dir' => 'C:/wamp/www/emeraude/app/cache/dev/doctrine/orm/Proxies',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'doctrine.orm.proxy_namespace' => 'Proxies',
             'assetic.asset_factory.class' => 'Symfony\\Bundle\\AsseticBundle\\Factory\\AssetFactory',
             'assetic.asset_manager.class' => 'Assetic\\Factory\\LazyAssetManager',
@@ -3105,11 +2966,7 @@ class appDevDebugProjectContainer extends Container
             'assetic.node.paths' => array(
 
             ),
-<<<<<<< HEAD
             'assetic.cache_dir' => 'C:/wamp/www/github/Depot/app/cache/dev/assetic',
-=======
-            'assetic.cache_dir' => 'C:/wamp/www/emeraude/app/cache/dev/assetic',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'assetic.twig_extension.class' => 'Symfony\\Bundle\\AsseticBundle\\Twig\\AsseticExtension',
             'assetic.twig_formula_loader.class' => 'Assetic\\Extension\\Twig\\TwigFormulaLoader',
             'assetic.helper.dynamic.class' => 'Symfony\\Bundle\\AsseticBundle\\Templating\\DynamicAsseticHelper',
@@ -3118,13 +2975,8 @@ class appDevDebugProjectContainer extends Container
             'assetic.debug' => true,
             'assetic.use_controller' => true,
             'assetic.enable_profiler' => false,
-<<<<<<< HEAD
             'assetic.read_from' => 'C:/wamp/www/github/Depot/app/../web',
             'assetic.write_to' => 'C:/wamp/www/github/Depot/app/../web',
-=======
-            'assetic.read_from' => 'C:/wamp/www/emeraude/app/../web',
-            'assetic.write_to' => 'C:/wamp/www/emeraude/app/../web',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.sass.bin' => '/usr/bin/sass',
@@ -3160,11 +3012,7 @@ class appDevDebugProjectContainer extends Container
             'fos_facebook.api.class' => 'FOS\\FacebookBundle\\Facebook\\FacebookSessionPersistence',
             'fos_facebook.helper.class' => 'FOS\\FacebookBundle\\Templating\\Helper\\FacebookHelper',
             'fos_facebook.twig.class' => 'FOS\\FacebookBundle\\Twig\\Extension\\FacebookExtension',
-<<<<<<< HEAD
             'fos_facebook.file' => 'C:/wamp/www/github/Depot/app/../vendor/facebook/src/base_facebook.php',
-=======
-            'fos_facebook.file' => 'C:/wamp/www/emeraude/app/../vendor/facebook/src/base_facebook.php',
->>>>>>> ec887a304c57364b0ef46b223df49d528f8e7f79
             'fos_facebook.app_id' => '133620996704145',
             'fos_facebook.secret' => 'cc69538949136be77f3302e26f6a6f2b',
             'fos_facebook.cookie' => true,
